@@ -19,9 +19,14 @@ def mph_to_fts(mph):
 
 mph = input("Input speed in mph: ")
 mph = float(mph)
+conversion = input("Input what to convert it into.\n0 = kph\n1 = m/s\n2 = ft/s\n")
+conversion = int(conversion)
 
-print("Speed in kph is", mph_to_kph(mph))
-
-print("Speed in m/s is", mph_to_ms(mph))
-
-print("Speed in ft/s is", mph_to_fts(mph))
+if conversion == 0:
+    print("Speed in kph is", mph_to_kph(mph))
+elif conversion == 1:
+    print("Speed in m/s is", mph_to_ms(mph))
+elif conversion == 2:
+    print("Speed in ft/s is", mph_to_fts(mph))
+else:
+    print("Invalid option")
